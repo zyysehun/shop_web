@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+# from apps.users.views import UsernameCountView
 
 
 # from django.http import HttpResponse
@@ -32,6 +33,16 @@ from django.urls import path
 #
 #     return HttpResponse('log')
 
+
+# 注册转换器
+from utils.converters import UsernameConverter
+from django.urls import register_converter
+
+register_converter(UsernameConverter, 'username')
+
 urlpatterns = [
     # path('admin/', admin.site.urls),
+    # 导入 users子应用的路由
+    path('', include('apps.users.urls')),
+    path('', include('apps.verifications.urls')),
 ]

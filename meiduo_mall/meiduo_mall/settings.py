@@ -38,15 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.users',
+    'apps.verifications',
+    'corsheaders',
+    'apps.areas',
+    'apps.goods',
 
 
 ]
 
 MIDDLEWARE = [
+    # CORS 的配置放在最上边
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -212,3 +219,36 @@ LOGGING = {
 # 通过提供一个值给AUTH_USER_MODEL设置，指向自定义的模型，Django允许你覆盖默认的User模型：
 # 这个点式路径包含Django应用的名称（必须位于你的INSTALLED_APPS中），和要用作User模型的Django模型的名称。
 AUTH_USER_MODEL = 'users.User'
+
+#####CORS#######################
+
+# CORS  白名单
+CORS_ORIGIN_WHITELIST = (
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+    'http://www.meiduo.site:8080',
+    'http://www.meiduo.site:8000'
+)
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+
+############邮件发送相关###########################
+#  让django的哪个类来发送邮件
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# 邮件服务器的主机和端口号
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+
+# 使用我的 163服务器 和 授权码
+# 发送邮件的邮箱
+EMAIL_HOST_USER = 'qi_rui_hua@163.com'
+# 在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD = '123456abc'
+
+
+# 收件人看到的发件人
+# EMAIL_FROM = '美多商城<qi_rui_hua@163.com>'
+
+
+#########加载自定义文件存储类#######################
+# 指定自定义的Django文件存储类
+DEFAULT_FILE_STORAGE = 'utils.fastdfs.storage.MyStorage'
