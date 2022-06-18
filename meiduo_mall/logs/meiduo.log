@@ -433,3 +433,20 @@ INFO 2022-06-14 09:17:20,020 autoreload 203 E:\Django\meiduo\meiduo\shop_web\mei
 INFO 2022-06-14 09:17:21,050 autoreload 578 Watching for file changes with StatReloader
 INFO 2022-06-14 09:21:43,949 autoreload 203 E:\Django\meiduo\meiduo\shop_web\meiduo_mall\meiduo_mall\settings.py changed, reloading.
 INFO 2022-06-14 09:21:44,882 autoreload 578 Watching for file changes with StatReloader
+INFO 2022-06-14 10:34:45,296 autoreload 578 Watching for file changes with StatReloader
+WARNING 2022-06-14 10:34:52,988 log 222 Not Found: /
+WARNING 2022-06-14 10:34:52,989 basehttp 154 "GET / HTTP/1.1" 404 3607
+WARNING 2022-06-14 10:34:53,306 log 222 Not Found: /favicon.ico
+WARNING 2022-06-14 10:34:53,306 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 3658
+INFO 2022-06-16 02:13:27,927 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:14:16,303 autoreload 251 /home/jennifer/桌面/shop_web/meiduo_mall/apps/verifications/apps.py changed, reloading.
+INFO 2022-06-16 02:14:16,532 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:15:03,304 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:17:32,755 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:18:00,131 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:18:51,373 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:19:25,753 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:20:15,095 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:21:02,628 autoreload 251 /home/jennifer/桌面/shop_web/meiduo_mall/meiduo_mall/settings.py changed, reloading.
+INFO 2022-06-16 02:21:02,940 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-06-16 02:22:15,386 autoreload 637 Watching for file changes with StatReloader
